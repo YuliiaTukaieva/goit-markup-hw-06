@@ -36,9 +36,10 @@ address{
     font-style: normal;
 }
 .container {
-    width: 1158px;
+    max-width: 320px;
     margin: auto;
-    padding: 0 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     justify-content: space-between;
 }
 /*----------HEADER----------*/
@@ -155,13 +156,13 @@ address{
 .hero-title {
     font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size: 56px;
-        line-height: 1.07;
+        font-size: 36px;
+        line-height: 1.11;
         letter-spacing: 0.02em;
         text-align: center;
         color: #fff;
         margin: 0 auto;
-        max-width: 496px;
+        max-width: 216px;
 }
 .hero-btn-link {
         border: none;
@@ -170,7 +171,7 @@ address{
         background-color: #4d5ae5;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         cursor: pointer;
-        margin-top: 48px;
+        margin-top: 72px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -808,4 +809,28 @@ display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+   .container{
+    min-width: 768px;
+   } 
+   .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+   }
+   .hero-btn-link {
+    margin-top: 36px;
+   }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        width: 1158px; 
+        padding: 0 15px;
+    }
+    .hero-btn-link {
+        margin-top: 48px;
+    }
 }

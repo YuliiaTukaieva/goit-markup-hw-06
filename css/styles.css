@@ -27,6 +27,7 @@ p {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
     margin: auto;
 }
 button {
@@ -147,7 +148,7 @@ address{
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        max-width: 1440px;
+        max-width: 320px;
         margin: 0 auto;
     
 }
@@ -212,12 +213,15 @@ font-family: "Roboto", sans-serif;
 }
 .middle-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     justify-content: space-between;
+
 }
 
 .middle-icon-link {
-    display: flex;
+    display: none;
+   /* display: flex;
  border: 1px solid #8e8f99;
         border-radius: 4px;
         width: 264px;
@@ -225,10 +229,11 @@ font-family: "Roboto", sans-serif;
         background: #f4f4fd;
         align-items: center;
         justify-content: center;
-        margin-bottom: 8px; 
+        margin-bottom: 8px; */
 }
 .middle-icon-icon {
-    display: flex;
+    display: none;
+    /*display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../images/icons.svg);
@@ -237,11 +242,14 @@ font-family: "Roboto", sans-serif;
     background-position: center;
     margin: auto;
     width: 64px;
-    height: 64px;
+    height: 64px;*/
 }
 
 .middle-list-link {
-    width: calc((100% - 72px) / 4);
+    /*width: calc((100% - 72px) / 4);*/
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .middle-list-link-name {
     font-family: "Roboto", sans-serif;
@@ -829,6 +837,9 @@ display: block;
     .container {
         width: 1158px; 
         padding: 0 15px;
+    }
+    .hero {
+        max-width: 1440px; 
     }
     .hero-btn-link {
         margin-top: 48px;

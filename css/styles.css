@@ -26,7 +26,7 @@ p {
 }
 img {
     display: block;
-    max-width: 100%;
+    min-width: 320px;
     height: auto;
     margin: auto;
 }
@@ -42,6 +42,8 @@ address{
     padding-left: 16px;
     padding-right: 16px;
     justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*----------HEADER----------*/
 .header {
@@ -56,7 +58,7 @@ address{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px;
+    padding: 17px 0;
 }
 
 .header-logo-pass {
@@ -68,9 +70,15 @@ address{
     color: #404bbf;
 }
 .header-menu {
-    display: flex;
-    gap: 40px;
+    display: none;
     
+}
+.open-menu-btn {
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
 }
 
 .header-nav {
@@ -80,24 +88,10 @@ address{
 }
 .header-container {
     display: flex;
-    
+    justify-content: space-between;
     align-items: center;
 }
-.header-menu-link {
-    display: block;
-    font-family: "Roboto", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        padding-top: 24px;
-        padding-bottom: 24px;
-}
-.header-menu-link:hover,
-.header-menu-link:focus {
-    color: #404bbf;
-}
+
 .header-menu-studio {
     position: relative;
     color: #404bbf;
@@ -116,8 +110,7 @@ address{
     bottom: -1px;
 }
 .header-menu-info {
-    display: flex;
-    gap: 40px;
+    display: none;
 }
 .header-logo-info {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,7 +154,7 @@ address{
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-        url(../images/heroimg-mob 2x.jpg);
+        url(../images/heroimg-mob\ 2x.jpg);
     }
   }
 
@@ -446,20 +439,24 @@ margin-bottom: 8px;
 }
 
 .footer-container {
-    display: flex;
+    /*display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: baseline;*/
+    min-height: 664px;
+    flex-direction: column;
+    gap: 72px;
+    justify-content: center;
 }
 
 .footer-about {
     flex-direction: column;
     background: #2e2f42;
-    margin-right: 120px;
+    /*margin-right: 120px;*/
 
 }
 .footer-form {
-    display: flex;
+   /* display: flex;*/
     gap: 24px;
     align-items: flex-end
 }
@@ -585,8 +582,11 @@ border: none;
 
 .addr{
     font-style: normal;
+    margin-left: auto;
 }
 .backdrop {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
@@ -595,6 +595,7 @@ border: none;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    position: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     /*display: flex;
     align-items: center;
@@ -813,9 +814,45 @@ display: block;
 
 @media screen and (min-width: 768px) {
    .container{
-    min-width: 768px;
+    max-width: 768px;
+    padding: 0 16px;
    } 
+   img {
+    max-width: 100%; 
+   }
+   .header-logo {
+    margin-right: 120px;
+   }
+   .header-menu {
+    display: flex;
+    gap: 40px;
+   }
+   .open-menu-btn {
+    display: none;
+   }
+   .header-menu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+   }
+   .header-menu-info-inform {
+    font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-menu-info-inform:hover,
+.header-menu-info-inform:focus {
+    color: #404bbf;
+}
+   .addr {
+    display: block;
+   }
    .hero {
+    
     padding-top: 112px;
     padding-bottom: 112px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/heroimg-tab\ 1x.jpg);
@@ -824,13 +861,10 @@ display: block;
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
     .hero {
-      background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/heroimg-tab 2x.jpg);
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/heroimg-tab\ 2x.jpg);
     }
   }
+
    .hero-title {
     font-size: 56px;
     line-height: 1.07;
@@ -841,35 +875,67 @@ display: block;
    }
    .middle-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 
+}
+.middle-icon-link {
+    display: none;
+}
+.middle-icon-icon {
+    display: none;
 }
 .middle-list-link {
     width: calc((100% - 24px) / 2);
-    gap: 24px 72px;
+    gap: 72px 24px;
 }
 .introduse-hero {
     display: flex;
-    gap: 24px 64px;
-    
+    flex-wrap: wrap;
+    gap: 64px 24px;
 }
 .introduse-hero-plus {
+    
     width: calc((100% - 24px) / 2);
+    
 }
 .picture-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px 72px;
+    gap: 72px 24px;
     row-gap: 72px;
 }
 .picture-list-number {
     width: calc((100% - 24px) / 2); 
 }
+}
 
 @media screen and (min-width: 1158px) {
     .container {
-        width: 1158px; 
+        max-width: 1158px; 
         padding: 0 15px;
     }
+    img {
+        max-width: 100%; 
+    }
+    .header-logo {
+        margin-right: 76px;
+    }
+    .header-menu {
+        display: flex;
+        gap: 40px;
+        
+    }
+    .header-menu-info-inform {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .header-menu-info {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
     .hero {
         max-width: 1440px;
         padding-top: 188px;
@@ -884,13 +950,13 @@ display: block;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-        url(../images/heroimg 2x.jpg);
+        url(../images/heroimg\ 2x.jpg);
     }
   }
     .hero-btn-link {
         margin-top: 48px;
     }
-}
+  
 .middle {
     
     padding-top: 120px;
@@ -901,7 +967,7 @@ display: block;
     width: calc((100% - 72px) / 4);
 }
 .middle-icon-link {
-        display: flex;
+    display: flex;
         border: 1px solid #8e8f99;
         border-radius: 4px;
         width: 264px;
@@ -958,4 +1024,5 @@ display: block;
 }
 .picture-list-number {
     width: calc((100% - 48px) / 3); 
+}
 }

@@ -863,7 +863,7 @@ display: block;
     display: block;
    }
    .hero {
-    
+    min-width: 768px;
     padding-top: 112px;
     padding-bottom: 112px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/heroimg-tab\ 1x.jpg);

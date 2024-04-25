@@ -433,16 +433,15 @@ margin-bottom: 8px;
 
 .footer {
     background: #2e2f42;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    
     width: 100%;
 }
 
 .footer-container {
-    /*display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: baseline;*/
+    align-items: center;
     min-height: 664px;
     flex-direction: column;
     gap: 72px;
@@ -452,14 +451,10 @@ margin-bottom: 8px;
 .footer-about {
     flex-direction: column;
     background: #2e2f42;
-    /*margin-right: 120px;*/
+   
 
 }
-.footer-form {
-   /* display: flex;*/
-    gap: 24px;
-    align-items: flex-end
-}
+
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -472,6 +467,11 @@ margin-bottom: 8px;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 16px;
+}
+.footer-logo-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .footer-text {
@@ -517,7 +517,9 @@ flex-direction: column;
   
 }
 .social-media {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Roboto", sans-serif;
 font-weight: 500;
 font-size: 16px;
@@ -528,9 +530,17 @@ margin-bottom: 16px;
 margin-top: 0;
 }
 .footer-subscribe {
-    min-width: 453px;
+   
     height: 80px;
-    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+
 }
 .footer-name-email {
     font-family: "Roboto", sans-serif;
@@ -558,13 +568,14 @@ padding: 8px 16px;
 background-color: transparent;
 }
 .footer-btn-icon {
+    margin-top: 16px;
     border-radius: 4px;
 height: 40px;
 background: #4d5ae5;
 display: inline-flex;
 align-items: center;
 justify-content: center;
-min-width: 165px;
+width: 165px;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -908,6 +919,37 @@ display: block;
 .picture-list-number {
     width: calc((100% - 24px) / 2); 
 }
+.footer-container {
+    height: 456px;
+    min-height: 456px;
+    padding: 96px 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-left: 108px;
+}
+    .footer-logo-space {
+        justify-content: flex-start;
+    }
+    .social-media {
+        align-items: baseline;
+    }
+
+    .footer-name-email {
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    .footer-form {
+        display: flex;
+        gap: 24px;
+        flex-direction: row;
+        align-self: flex-start;
+    }
+
+    .footer-btn-icon {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1025,4 +1067,25 @@ display: block;
 .picture-list-number {
     width: calc((100% - 48px) / 3); 
 }
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
+
+.footer-form {
+     display: flex;
+     gap: 24px;
+     align-items: flex-end;
+     
+}
+.footer-about {
+    
+   margin-right: 120px;
+
+}
+.footer-subscribe {
+    margin-left: 80px;
+    min-width: 453px;
+}
+}
+

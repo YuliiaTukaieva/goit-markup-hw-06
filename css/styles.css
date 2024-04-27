@@ -13,12 +13,12 @@ body {
     background-color: #fff;
     color: #434455;
 }
-h1
-h2
-h3
-h4
-h5
-h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
     margin: 0;
     margin-bottom: 0;
@@ -26,9 +26,9 @@ p {
 }
 img {
     display: block;
-    min-width: 320px;
+    max-width: 100%;
     height: auto;
-    margin: auto;
+    
 }
 button {
     cursor: pointer;
@@ -97,17 +97,17 @@ address{
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .header-menu-studio::after {
     content: '';
         display: block;
         position: absolute;
-        margin-top: 20px;
-    border-radius: 2px;
-    width: 48px;
-    height: 4px;
-    background: #404bbf;
-    left: 0;
-    bottom: -1px;
+        border-radius: 2px;
+        width: 48px;
+        height: 4px;
+        background: #404bbf;
+        left: 0;
+        bottom: -1px;
 }
 .header-menu-info {
     display: none;
@@ -336,6 +336,7 @@ letter-spacing: 0.02em;
     overflow: hidden;
 }
 .middle-list {
+    display: flex;
     flex-wrap: wrap;
     gap: 24px;
     justify-content: space-between;
@@ -355,8 +356,7 @@ letter-spacing: 0.02em;
     flex-wrap: wrap;
     gap: 72px;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+
 }
 .middle-list-link-name {
     font-family: "Roboto", sans-serif;
@@ -366,6 +366,7 @@ line-height: 1.11;
 letter-spacing: 0.02em;
 color: #2e2f42;
 margin-bottom: 8px;
+text-align: center;
 }
 .middle-list-link-read {
     font-family: "Roboto", sans-serif;
@@ -378,7 +379,7 @@ margin-bottom: 8px;
 .introduse{
     
     background: #f4f4fd;
-
+    width: 296px;
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -400,11 +401,13 @@ margin-bottom: 8px;
         text-transform: capitalize;
         margin-bottom: 72px;
 }
+
 .introduse-hero-plus {
-    background-color: #FFFFFF;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        background-color: #FFFFFF;
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
         background: #fff;
+        margin-bottom: 72px;
     
 }
 .introduse-hero-hero {
@@ -419,7 +422,7 @@ margin-bottom: 8px;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    text-align: center;
+
     margin-bottom: 8px;
 }
 .introduse-name-about {
@@ -473,6 +476,7 @@ margin-bottom: 8px;
 
 }
 .picture-list {
+    display: flex;
     flex-wrap: wrap;
     gap: 48px;
     row-gap: 48px;
@@ -561,7 +565,8 @@ margin-bottom: 8px;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    min-height: 664px;
+    padding-bottom: 96px;
+    padding-top: 96px;
     flex-direction: column;
     gap: 72px;
     justify-content: center;
@@ -972,6 +977,13 @@ display: block;
     flex-direction: column;
     gap: 12px;
    }
+
+   .header-menu-link {
+    position: relative;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
    .header-menu-info-inform {
     font-family: "Roboto", sans-serif;
         font-weight: 400;
@@ -1031,9 +1043,21 @@ display: block;
     flex-wrap: wrap;
     gap: 64px 24px;
 }
+
+.introduse {
+  width: 100%;
+}
+.introduse-name-about {
+  margin: 0;
+}
+
+.container-introduse {
+    width: 584px;
+}
 .introduse-hero-plus {
     
     width: calc((100% - 24px) / 2);
+    gap: 72px 24px;
     
 }
 .picture-list {
@@ -1053,7 +1077,7 @@ display: block;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: flex-start;
-    padding-left: 108px;
+    width: 584px;
 }
     .footer-logo-space {
         justify-content: flex-start;
@@ -1172,10 +1196,16 @@ display: block;
 .middle-list-link-read  {
     font-weight: 400;
 }
+
 .introduse{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
+.container-introduse {
+    width: 1158px;
+}
+
 .introduse-hero {
     display: flex;
     gap: 24px;
@@ -1206,6 +1236,7 @@ display: block;
 .footer-container {
     flex-wrap: nowrap;
     gap: inherit;
+    width: 1158px;
 }
 
 .footer-form {
